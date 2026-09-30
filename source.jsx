@@ -7,11 +7,10 @@
            "API Document Channeling Tabungan Emas v1.0" (Agata Pegadaian).
            Catatan "⚠ Spec" menandai hal yang perlu dikonfirmasi ke Pegadaian.
            ===================================================================== */
-        const BASE_URL = "https://revproxdev.pegadaian.co.id/agata";
-        const CHANNEL = { channelId: "6017", clientId: "5000" };
-        // ⚠ Spec: contoh respons API Doc mengembalikan clientId/userId/trxSource "5135"
-        // walau request memakai clientId "5000". Dimirror apa adanya.
-        const RESPONSE_CLIENT_ID = "5135";
+        const BASE_URL = "https://apisimulator.co.id/portal";
+        const CHANNEL = { channelId: "6969", clientId: "1000" };
+        // clientId/userId/trxSource di respons disamakan dengan clientId request.
+        const RESPONSE_CLIENT_ID = CHANNEL.clientId;
 
         // Harga "server" Pegadaian (mock). Satuan per 0,01 gram (field satuan = "0.01").
         // hargaJual 24740 → harga beli nasabah Rp 2.474.000/g; hargaBeli 23750 → harga jual nasabah Rp 2.375.000/g
@@ -1151,7 +1150,7 @@
                                                     </h3>
                                                     <p className="text-[11px] text-slate-300">POV Nasabah • {prices.tglBerlaku}</p>
                                                 </div>
-                                                <span className="text-[11px] bg-pgd-lime/10 text-pgd-lime border border-pgd-lime/30 px-2 py-0.5 rounded font-mono tabular-nums">Agata Channel 6017</span>
+                                                <span className="text-[11px] bg-pgd-lime/10 text-pgd-lime border border-pgd-lime/30 px-2 py-0.5 rounded font-mono tabular-nums">Agata Channel 6969</span>
                                             </div>
 
                                             <div className="bg-pgd-darkest p-2 rounded-lg border border-pgd-green/20 mb-2.5 text-[11px] text-slate-300 flex items-center justify-between gap-1">
@@ -1945,7 +1944,7 @@
                                     <Icon name="terminal" className="w-5 h-5 text-pgd-lime" />
                                     Agata Pegadaian API Real-time Inspector
                                 </h2>
-                                <p className="text-xs text-slate-300">Client ID: <span className="text-pgd-lime font-mono tabular-nums">5000</span> | Channel ID: <span className="text-pgd-lime font-mono tabular-nums">6017</span></p>
+                                <p className="text-xs text-slate-300">Client ID: <span className="text-pgd-lime font-mono tabular-nums">1000</span> | Channel ID: <span className="text-pgd-lime font-mono tabular-nums">6969</span></p>
                             </div>
                             <div className="flex items-center gap-2 flex-wrap justify-end">
                                 <button onClick={openNewCustomerPanel} className="text-[11px] px-3 py-1.5 rounded-lg bg-pgd-green text-white font-semibold hover:bg-pgd-lime hover:text-pgd-dark transition">+ Buka Rekening Lagi (nasabah baru)</button>
